@@ -1,25 +1,75 @@
-/*
-Clase 20 - Ejercicios: Operadores
-Vídeo: https://youtu.be/1glVfFxj8a4?t=6458
-*/
+
 
 // 1. Crea una variable para cada operación aritmética
+let a=5;
+let b=6;
 
+console.log(a+b)
+console.log(a-b)
+console.log(a*b)
+console.log(a/b)
+console.log(a**b)
+console.log(a%b)
 // 2. Crea una variable para cada tipo de operación de asignación,
 //    que haga uso de las variables utilizadas para las operaciones aritméticas
+let c=4;
 
+console.log(c+=2)
+console.log(c-=2)
+console.log(c*=2)
+console.log(c/=2)
+console.log(c%=2)
+console.log(c**=2)
 // 3. Imprime 5 comparaciones verdaderas con diferentes operadores de comparación
 
+let d=5;
+console.log(a==d)
+console.log(a=="5")
+console.log(a===d)
+console.log(a!=b)
+console.log(a!=="6")
 // 4. Imprime 5 comparaciones falsas con diferentes operadores de comparación
+let e=false;
+console.log(a===c)
+console.log(a==e)
+console.log(a!==a)
+console.log(a!=a)
+console.log(a!==a)
+console.log(e==1)
 
 // 5. Utiliza el operador lógico and
-
+console.log(a>2 && 1<2)
+console.log(a>2 && 1<2 && 65<67)
 // 6. Utiliza el operador lógico or
-
+console.log(a>2 || 1<2) //true
+console.log(a>2 || 1>2)//true
+console.log(a<1 || a<4)//false
 // 7. Combina ambos operadores lógicos
 
+console.log(a<1 || a<4 && a>4)//false
+console.log(a>1 || a>4 && a>4)//true
+console.log(a<15 && a>4 || 6>a)//true
 // 8. Añade alguna negación
 
+console.log(!(a<1 || a<4 && a>4))//true
+
 // 9. Utiliza el operador ternario
+let edad=19;
+edad>=18 ? console.log('mayor de edad') : console.log('menor de edad')
 
 // 10. Combina operadores aritméticos, de comparáción y lógicas
+console.log((a+b)<12 && a>15)//FALSE
+console.log((a===6) && a<4)//FALSE Y FALSE DE FALSE
+console.log((a===5) && a>4)
+
+// 11. Operadores combinados
+let r = 10;
+let s = 5;
+let f = "10";
+
+console.log( (r + s) > 12 && r === 10 );   // true
+console.log( (r - s * 2) <= 0 || s !== "5" ); // true
+console.log( !(r == f) && (r % s === 0) );  // false
+console.log( (r / s === 2) && (f !== 10) ); // true
+console.log( (r + "5") < (f + "2") );       // false
+  

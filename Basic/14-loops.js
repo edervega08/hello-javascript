@@ -1,18 +1,15 @@
-/*
-Clase 29 - Bucles
-Vídeo: https://youtu.be/1glVfFxj8a4?t=11575
-*/
-
 // Loops o bucles
 
 // for
 
+//saludar  veces
 for (let i = 0; i < 5; i++) {
-    console.log(`Hola ${i}`)
+    console.log(`Hola ${i}`)// codigo que se va a repetir
 }
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
 
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+//pequena explicacion concreta de por que se uso length y no se especifico un numero
 for (let i = 0; i < numbers.length; i++) {
     console.log(`Elemento: ${numbers[i]}`)
 }
@@ -22,23 +19,24 @@ for (let i = 0; i < numbers.length; i++) {
 let i = 0
 while (i < 5) {
     console.log(`Hola ${i}`)
-    i++
+   i++; //truco para recordar siempre el incremento y para que no se valla a infinito
 }
 
 // Bucle infinito
 // while(true) {
 // }
 
-// do while
-
+// do while //SE EJECUTA AL MENOS UNA VEZ  UN EJERCICIO DE DO WHILE
+console.log("DO WHILE")
 i = 6
 do {
     console.log(`Hola ${i}`)
     i++
 } while (i < 5)
 
+    
 // for of
-
+console.log("FOR OF")
 const myArray = [1, 2, 3, 4]
 
 const mySet = new Set(["Brais", "Moure", "mouredev", 37, true, "braismoure@mouredev.com"])
@@ -50,30 +48,35 @@ const myMap = new Map([
 ])
 
 const myString = "¡Hola, JavaScript!"
-
+//impirme los valore que tiene el array?
 for (let value of myArray) {
     console.log(value)
 }
 
+
+//impirme los valore que tiene el set?
 for (let value of mySet) {
     console.log(value)
 }
-
+//impirme los valore que tiene el Map
 for (let value of myMap) {
     console.log(value)
 }
-
+// sin ser una estructura de datos, se comporta como si fuera una estructura de un listado de caracteres
+//mostrara cada caracter del array
 for (let value of myString) {
     console.log(value)
 }
 
-// break y continue
-
+//break y continue
+//probar con if otra forma
+//saltar iteraciones ejercicios y ejemplos
+console.log("break y continue")
 for (let i = 0; i < 10; i++) {
-    if (i == 5) {
+    if (i == 3) {
         continue
-    } else if (i == 7) {
+    } else if (i == 6) {
         break
     }
     console.log(`Hola ${i}`)
-}
+} 
