@@ -3,9 +3,9 @@
 // -----------------------------
 
 // Cadenas de texto (string)
-let myName = "Brais Moure"      // <-- string con comillas dobles
-let alias = 'MoureDev'          // <-- string con comillas simples
-let email = `braismoure@mouredev.com` // <-- string con template literals (backticks)
+let myName = "Lionel Messi"      // <-- string con comillas dobles
+let alias = 'Messi'          // <-- string con comillas simples
+let email = `messi@mouredev.com` // <-- string con template literals (backticks)
 
 // Números (number)
 let age = 37     // <-- número entero

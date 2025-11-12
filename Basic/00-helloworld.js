@@ -5,7 +5,9 @@
 Esto es
 un comentario
 en varias líneas
-*/
+*/let nombre = "Eder";
+console.log(`Hola, ${nombre}! Bienvenido a JavaScript`);
+
 
 console.log("¡Hola, JavaScript!")
 console.log('¡Hola, JavaScript!')
