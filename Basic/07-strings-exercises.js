@@ -1,23 +1,24 @@
 // 1. Concatena dos cadenas de texto
 let cadena1="CADENA 1"
 let cadena2="cadena 2"
-console.log(cadena1+" "+cadena2)
+
+console.log(cadena1+" "+ cadena2)
 //o
 cadena2= "CADENA 1"+ " "+ cadena2
-console.log(cadena2)
+console.log(cadena2) // 17 por que se reutilizo y se concateno
 
 // 2. Muestra la longitud de una cadena de texto
 console.log(cadena2.length)
 
 // 3. Muestra el primer y último carácter de un string
 console.log(cadena1[0]);
-console.log(cadena1[cadena1.length -1]);
+console.log(cadena1[cadena1.length -1]);//el ultimo
 
 // 4. Convierte a mayúsculas y minúsculas un string
 let may="MAYUSCULAS";
 let min="minisculas"
-console.log(may.toLowerCase())
-console.log(min.toUpperCase())
+console.log(may.toLowerCase())//min
+console.log(min.toUpperCase())//may
 
 // 5. Crea una cadena de texto en varias líneas
 let cadena3=`Linea 1
@@ -34,9 +35,12 @@ console.log(`Esta es ${Interpolacion} ${Interpolacion2}` )
 
 // 7. Reemplaza todos los espacios en blanco de un string por guiones
 let remplazar="a b c";
-console.log(remplazar.replace(/ /g,"-"))
+console.log(remplazar.replace(/ /g,"-")) 
+// estas / / lo que está aquí adentro es un patrón de búsqueda
+// la g es para que haga la busqueda de todas no solo de la primera
 
 // 8. Comprueba si una cadena de texto contiene una palabra concreta
+//let Interpolacion="Una interpolacion";
 console.log(Interpolacion.includes("Una"));
 
 // 9. Comprueba si dos strings son iguales

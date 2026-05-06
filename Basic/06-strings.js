@@ -18,10 +18,11 @@ console.log(greeting[11])
 
 
 // Métodos comunes
-
+console.log("Métodos comunes")
 console.log(greeting.toUpperCase()) // Mayúsculas
 console.log(greeting.toLowerCase()) // Minúsculas
 console.log(greeting.indexOf("Hola")) // Índice Muestra 0 por que esta en el primero elemento 
+console.log(greeting.indexOf(",")) // Índice Muestra 4 que esta en ese lugar
 console.log(greeting.indexOf("Brais")) //Índice Muestra 6 por que esta en el elemento 6
 console.log(greeting.indexOf("MoureDev"))//Menos -1 por que no lo encontro
 console.log(greeting.includes("Hola")) // Incluye Muestra true por que solo confirma si esta o no
@@ -30,6 +31,7 @@ console.log(greeting.includes("Brais"))// Incluye Muesra true por que solo confi
 console.log(greeting.includes("MoureDev"))//muestra false por que no esta
 console.log(greeting.slice(0, 10)) // Sección retorna los elemento que estan entre el indice 0 y 10 
 console.log(greeting.replace("Brais", "MoureDev")) // Reemplazo- remplaza Brais por MoureDev
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++") // Reemplazo- remplaza Brais por MoureDev
 
 // Template literals (plantillas literales)
 
@@ -61,18 +63,21 @@ console.log("Hola".startsWith("Ho")); // true
 console.log("Hola".endsWith("la")); // true
 
 // indexOf(texto) 
-console.log("Hola".indexOf("o")); // 
-console.log(email.indexOf("e"));
+console.log("Hola".indexOf("o")); // 1
+console.log(email.indexOf("e"));//9 en esa posicion se encuentra la e
 
 // slice(inicio, fin)--muestra lo que esta dentro del ese rango
 console.log("Hola".slice(1,3)); // "ol"
 console.log(email.slice(1,10)); // "raismoure"
+
+
 let texto1 = "Hola Mundo";
 //si se usan indices negativos devuelve vacio
 console.log(texto1.slice(0,4));    // "Hola"
 console.log(texto1.slice(5,10));   // "Mundo"
 console.log(texto1.slice(10,5));   // ""      (no invierte los índices)
 console.log(texto1.slice(-5,-1));  // "Mund"  (cuenta desde el final)
+//incluye el inicio pero excluye el fin.
 
 
 // substring(i, j)-de un indice hasta un indice limite
@@ -90,29 +95,29 @@ console.log("Hola".replace("Ho","Ad")); // "Adla"
 // trim() (no argumentos)-Quita espacios en blanco al inicio y al final de un string.
 console.log("  Hola  ".trim()); // "Hola"
 
-// split(separador)
-console.log("a,b,c".split(",")); // ["a", "b", "c"]
+// 1 split(separador) se especifica que por , comas
+console.log("a,b,c".split(",")); // ["a", "b", "c"] array
 
-// 2️⃣ Separar por espacios
+// 2 Separar por espacios se especifica que por espacios
 console.log("Hola cómo estás".split(" ")); 
-// ["Hola", "cómo", "estás"]
+// ["Hola", "cómo", "estás"] array
 
-// 3️⃣ Separar por letra
+// 3️Separar por letra se especifica que por letras
 console.log("Hola".split("o")); 
 // ["H", "la"]
 
-// 4️⃣ Separar por cadena completa
+// 4️ Separar por cadena completa se especifica que por cadena 
 console.log("uno##dos##tres".split("##")); 
 // ["uno", "dos", "tres"]
 
-// 5️⃣ Separar en cada carácter (sin separador)
+// 5️ Separar en cada carácter (sin separador)
 console.log("Messi".split("")); 
 // ["M", "e", "s", "s", "i"]
 
 //Limitar la cantidad de elementos
 console.log("a,b,c,d,e".split(",", 3)); // ["a","b","c"]
 
-Combinar con otros métodos
+//Combinar con otros métodos
 let data = "uno,dos,tres";
 let arr = data.split(",").map(item => item.toUpperCase());
 console.log(arr); // ["UNO","DOS","TRES"]

@@ -8,9 +8,17 @@ en varias líneas
 */let nombre = "Eder";
 console.log(`Hola, ${nombre}! Bienvenido a JavaScript`);
 
-
+/* COMILLAS */
+//Comillas dobles " "
+//Para strings normales.
 console.log("¡Hola, JavaScript!")
+
+/* Comillas simples ' ' */
+//solo cambia estilo
+//Ejemplo combinado con texto en comillas
+let frase = 'Ella dijo \'hola\'';
 console.log('¡Hola, JavaScript!')
+
 console.log(`¡Hola, JavaScript!`)
 
 // console.log("¡Hola, JavaScript!")

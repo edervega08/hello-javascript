@@ -57,12 +57,15 @@ console.log(a >= b)  // Mayor o igual que
 console.log(a <= b)  // Menor o igual que
 
 // Comparación por valor
+/* SOLO compara el valor
+❌ Ignora el tipo */
 console.log(a == b)   // Igualdad por valor
 console.log(a == 6)   // true
 console.log(a == "6") // true → convierte string a número
 console.log(a == a)   // true
 
 // Comparación estricta (valor y tipo)
+//NO convierte tipos
 console.log(a === a)   // true
 console.log(a === 6)   // true
 console.log(a === "6") // false (number vs string)
@@ -70,25 +73,26 @@ console.log(a === "6") // false (number vs string)
 // Desigualdad
 console.log(a != 6)       // false
 console.log(a !== "6")    // true → distinto en tipo y valor
+//En valor, son "iguales" pero no el tipo
 
 // Casos especiales
 console.log(0 == false)   // true (0 se considera falso)
 console.log(1 == false)   // false
 console.log(2 == false)   // false
-console.log(0 == "")      // true
+console.log(0 == "")      // true un texto vacío se convierte mágicamente en un cero.
 console.log(0 == " ")     // true
 console.log(0 == '')      // true
 console.log(0 == "Hola")  // false
-console.log(0 === "")     // false
-console.log(undefined == null)  // true
-console.log(undefined === null) // false
+console.log(0 === "")     // false, da falso por que compara estrictamente valor y tipo, aunque en valor son cero son diferentes en tipo 
+console.log(undefined == null)  // true Caso ESPECIAL de JS, solo entre ellos son iguales
+console.log(undefined === null) // false , Tipos diferentes
 
 
 // ============================================================
 // 3.1 Truthy y Falsy Values
 // ============================================================
 
-/*
+/* se devuelven los valores no boolean
 Truthy values (valores verdaderos):
 - Todos los números positivos y negativos (excepto 0)
 - Todas las cadenas de texto (excepto vacías)
@@ -96,8 +100,11 @@ Truthy values (valores verdaderos):
 */
 
 /*
+con un == da true pero no son iguales
+y el === simplemente no por que no son del mismo tipo
 Falsy values (valores falsos):
 - 0
+- -0
 - 0n
 - null
 - undefined
@@ -111,14 +118,18 @@ Falsy values (valores falsos):
 // ============================================================
 
 console.log('++++++++++++ Operadores lógicos ++++++++++++')
+//prioridades, !, &&, ||
 
 // AND (&&) → si una condición es falsa, todo es falso
+/* Devuelve el primer falsy o el último valor si todos son truthy */
 console.log(5 > 10 && 15 > 20)       // false (ambas falsas)
 console.log(5 < 10 && 15 < 20)       // true  (ambas verdaderas)
 console.log(5 < 10 && 15 > 20)       // false (una falsa)
 console.log(5 > 10 && 15 > 20 && 30 > 40) // false (todas falsas)
 
 // OR (||) → basta con que una condición sea verdadera
+/* NO devuelve boolean
+Devuelve el primer truthy */
 console.log(5 > 10 || 15 > 20)       // false
 console.log(5 < 10 || 15 < 20)       // true
 console.log(5 < 10 || 15 > 20)       // true
@@ -144,5 +155,4 @@ console.log(!(5 > 10 || 15 > 20)) // true
 const isRaining = false
 
 isRaining 
-  ? console.log("Está lloviendo") 
-  : console.log("No está lloviendo")
+  ? console.log("Está lloviendo") : console.log("No está lloviendo")

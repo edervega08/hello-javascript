@@ -20,11 +20,14 @@ console.log(nombre);
 
 // 2. Imprime por consola un mensaje si el usuario y contraseña concide con unos establecidos
 let usuario="messi10";
-let contraseña="cr7melapela";
+let contraseña="goat";
 
-if(usuario==="messi10" && contraseña==="cr7melapela"){
+if(usuario==="messi10" && contraseña==="goat"){
     console.log("EL USUARIO Y LA CONTRASENA SON CORRECTOS")
     
+}
+else {
+    console.log("no coinciden")
 }
 
 // 3. Verifica si un número es positivo, negativo o cero e imprime un mensaje
@@ -71,7 +74,7 @@ else{
 }
 
 
-// 7. Muestra el número de días que tiene un mes dependiendo de la variable del ejercicio anterior
+// 7. Muestra el número de días que tiene cada mes dependiendo de la variable del ejercicio anterior
 
 if(mes===1 || mes===3 || mes===7 || mes===8 || mes===10 || mes===12){
   console.log("31 Dias tienen estos meses")
@@ -86,7 +89,7 @@ else{
 // switch
 
 // 8. Usa un switch para imprimir un mensaje de saludo diferente dependiendo del idioma
-//OK PERO: para mayor claridad se recomienda usar cadenas: "en", "fr", "zh", "ru"
+//OK PERO: para mayor claridad se recomienda usar cadenas: "en", "fr", "zh", "ru" en lugar de numero
 let idioma=3;
 //1 ingles
 //2 fraces 
@@ -110,6 +113,7 @@ switch (idioma) {
 }
 console.log("Idioma", resultado);
 // 9. Usa un switch para hacer de nuevo el ejercicio 6
+//para mayor claridad se recomienda usar cadenas en lugar de numero
 let mes2=1;
 
 let estación;
@@ -142,18 +146,19 @@ console.log("La estacion es: ",estación)
 // 10. Usa un switch para hacer de nuevo el ejercicio 7
 
 let dias;
+let mes3="marzo";
 
-switch (mes2) {
-  case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-    dias = 31;
+switch (mes3) {
+  case "enero": case "marzo": case "mayo": case "julio": case "agosto": case "octubre": case "diciembre":
+    dias = "tiene 31";
     break;
-  case 4: case 6: case 9: case 11:
-    dias = 30;
+  case "abril": case "junio": case "septiembre": case "noviembre":
+    dias = "tiene 30 dias";
     break;
-  case 2:
+  case "febrero":
     dias = "28 o 29 (año bisiesto)";
     break;
   default:
     dias = "Mes no válido";
 }
-console.log("Días:", dias); 
+console.log(mes3+" "+dias); 
