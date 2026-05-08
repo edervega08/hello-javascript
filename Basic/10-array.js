@@ -37,6 +37,8 @@ myArray2[4] = "mouredev"
 
 console.log(myArray2) // [ <1 empty item>, "mouredev", "Brais", <1 empty item>, "mouredev" ]
 
+
+
 myArray = []
 myArray[2] = "Brais"
 // myArray[0] = "Moure"
@@ -45,11 +47,17 @@ myArray[5] = "ESPACIO EXTRA" // RESERVA los índices 0,3,4 vacíos
 
 console.log(myArray) // [ <1 empty item>, "mouredev", "Brais", <2 empty items>, "ESPACIO EXTRA" ]
 
+//join('')
+/* .join(''): Une todos los elementos del array en una sola cadena de texto. En el ejemplo, transforma [11, 2, 3, 55] en "112355". */
+let numeros = [11, 2, 3, 55];
+let totalCaracteres = numeros.join('').length;
+
+console.log(totalCaracteres); // Salida: 6
+
 
 // ------------------- Métodos comunes -------------------
 
-myArray = []
-
+myArray = [] //aqui se inicia el array vacio nuevamente
 // push y pop
 
 myArray.push("Brais")
@@ -60,15 +68,15 @@ myArray.push(37)
 console.log(myArray) // ["Brais", "Moure", "mouredev", 37]
 
 console.log(myArray.pop()) // 37 → elimina y devuelve el último
-myArray.pop()              // elimina "mouredev"
-
+myArray.pop()              //otra forma, aqui elimina "mouredev"
+//elimina el ultimo y solo quedan 2
 console.log(myArray) // ["Brais", "Moure"]
 
 // shift y unshift
 // shift elimina el primer elemento y lo devuelve
 // unshift agrega uno o más elementos al inicio
-
-console.log(myArray.shift()) // "Brais"
+console.log("shift y unshift++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+console.log(myArray.shift()) // "Brais" //elimina el primero y lo regresa
 console.log(myArray)         // ["Moure"]
 
 myArray.unshift("Brais", "mouredev")
@@ -131,6 +139,7 @@ let result = ejemplo.map(function(v,i){
     return i + 1; // reemplaza cada valor con índice+1
 });
 console.log(result); // [1, 2, 3, 4, 5]
+
 
 
 /* 
