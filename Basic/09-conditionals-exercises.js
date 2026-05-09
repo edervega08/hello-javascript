@@ -143,7 +143,7 @@ switch(mes2){
     default: estación="NO CORRESPONDE"
 }
 console.log("La estacion es: ",estación)
-// 10. Usa un switch para hacer de nuevo el ejercicio 7
+// 10. Usa un switch para hacer de nuevo el ejercicio 7.
 
 let dias;
 let mes3="marzo";
