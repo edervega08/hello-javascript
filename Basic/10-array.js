@@ -75,7 +75,7 @@ console.log(myArray) // ["Brais", "Moure"]
 // shift y unshift
 // shift elimina el primer elemento y lo devuelve
 // unshift agrega uno o más elementos al inicio
-console.log("shift y unshift++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+console.log("shift y unshift++++++++++++++++++++")
 console.log(myArray.shift()) // "Brais" //elimina el primero y lo regresa
 console.log(myArray)         // ["Moure"]
 
@@ -91,16 +91,16 @@ console.log(myArray.length) // 3 → tamaño del array
 // 1. Inicializarlo vacío
 myArray = []    // forma más común
 myArray.length = 0 // alternativa (menos clara)
-console.log(myArray) // []
+console.log(myArray) // [] vacio
 
 // ----- SLICE -----
-// slice(inicio, fin) → copia un rango sin modificar el original
+// slice(inicio EMPIEZA EN 0, fin) → copia un rango sin modificar el original
 let arr = [10, 20, 30, 40, 50];
 console.log(arr.slice(1, 3)); // [20, 30]
 console.log(arr);             // [10, 20, 30, 40, 50] → no cambia
 
 // ----- SPLICE -----
-// splice(inicio, cantidad, ...elementos) → modifica el array
+// splice(inicio EMPIEZA EN 0, cantidad, ...elementos) → modifica el array
 let arr2 = [10, 20, 30, 40, 50];
 
 // Eliminar 2 elementos desde índice 1
@@ -108,8 +108,13 @@ console.log(arr2.splice(1, 2)); // [20, 30]
 console.log(arr2);              // [10, 40, 50]
 
 // Insertar elementos en índice 1
+// [10, 40, 50] SALIDA ANTERIOR Y DE AQUI SE PARTE
 arr2.splice(1, 0, 25, 26);
 console.log(arr2); // [10, 25, 26, 40, 50]
+
+//remplazar "posicion(1), cantidad a eliminar(3), valores a remplazar agregar(2)"
+arr2.splice(1,3,20,30)
+console.log(arr2)// [10, 20, 30, 40, 50]
 
 // fill
 /* Rellena todas las posiciones con el mismo valor
@@ -127,8 +132,12 @@ let arr_2 = [1, 2, 3];
 let nuevoArr = arr_2.map(function(valor, indice){
     return valor * 2; // multiplica cada valor por 2
 });
+/* let nuevoArr = arr_2.map(valor => valor * 2); */
 console.log(nuevoArr); // [2, 4, 6]
 console.log(arr_2);    // [1, 2, 3] → original intacto
+
+//valor recibe CADA ELEMENTO del array
+//indice recibe LA POSICIÓN de ese elemento
 
 // ejemplo fill + map
 /* Cuando creas un array con new Array(n) son huecos,
@@ -138,26 +147,26 @@ ejemplo.fill(0);              // [0, 0, 0, 0, 0]
 let result = ejemplo.map(function(v,i){
     return i + 1; // reemplaza cada valor con índice+1
 });
+//let nuevo = array.map((valor, indice) => indice + 1);
 console.log(result); // [1, 2, 3, 4, 5]
 
 
+let array_ejemplo = [3]
+let array_ejemplo2 = new Array(3)
 
-/* 
- let myArray = [3]
-let myArray2 = new Array(3)
-
-console.log("myArray:", myArray)   // [3]
-console.log("myArray2:", myArray2) // [ <3 empty items> ]
+console.log("array_ejemplo:", array_ejemplo)   // [3]// MENSAJE Y VALOR DEL ARRAY
+console.log("array_ejemplo2:", array_ejemplo2) // [ <3 empty items> ] 3 VACIOS
 
 // forEach con [3]
-console.log("Recorriendo myArray:")
-myArray.forEach(function(valor, indice) {
+console.log("Recorriendo array_ejemplo:")
+//RECORRE EL INDICE 0 Y VALOR 3
+array_ejemplo.forEach(function(valor, indice) { 
   console.log("Índice:", indice, "Valor:", valor)
 })
 
 // forEach con new Array(3)
-console.log("Recorriendo myArray2:")
-myArray2.forEach(function(valor, indice) {
+console.log("Recorriendo array_ejemplo2:")
+//RECORRE EL INDICE Y VALOR, PERO ESTAN VACIOS
+array_ejemplo2.forEach(function(valor, indice) { 
   console.log("Índice:", indice, "Valor:", valor)
 })
- */
