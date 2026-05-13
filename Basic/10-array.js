@@ -123,6 +123,14 @@ let arr1 = new Array(5);   // [ <5 empty items> ]
 arr1.fill(0);              // llena todos con 0
 console.log(arr1);         // [0, 0, 0, 0, 0]
 
+//prueba de fill
+
+let prueba= new Array(5);
+array.fill("Prueba")
+console.log(array) // [ 'Prueba', 'Prueba', 'Prueba', 'Prueba', 'Prueba' ]
+array.fill("modifcacion", 2, 4)
+console.log(array) // [ 'Prueba', 'Prueba', 'modifcacion', 'modifcacion', 'Prueba' ]
+
 // map 
 /* Qué es: Es un método propio de los arrays, no tiene relación con Map.
 Uso: Sirve para recorrer un array y devolver un nuevo array transformado. */
@@ -161,12 +169,12 @@ console.log("array_ejemplo2:", array_ejemplo2) // [ <3 empty items> ] 3 VACIOS
 console.log("Recorriendo array_ejemplo:")
 //RECORRE EL INDICE 0 Y VALOR 3
 array_ejemplo.forEach(function(valor, indice) { 
-  console.log("Índice:", indice, "Valor:", valor)
+  console.log("Índice:", indice, "Valor:", valor) // RECORRE EL INDICE 0 Y VALOR 3
 })
 
 // forEach con new Array(3)
 console.log("Recorriendo array_ejemplo2:")
 //RECORRE EL INDICE Y VALOR, PERO ESTAN VACIOS
-array_ejemplo2.forEach(function(valor, indice) { 
-  console.log("Índice:", indice, "Valor:", valor)
+array_ejemplo2.forEach(function(valor, indice) { // NO SE RECORRE NINGÚN ELEMENTO PORQUE SON HUECOS VACÍOS
+  console.log("Índice:", indice, "Valor:", valor) // NO SE IMPRIME NADA 
 })
