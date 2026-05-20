@@ -1,15 +1,15 @@
 // Loops o bucles
 
 // for
+//for(inicialización; condición; actualización){
 
-//saludar  veces
 for (let i = 0; i < 5; i++) {
     console.log(`Hola ${i}`)// codigo que se va a repetir
 }
 
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
-//pequena explicacion concreta de por que se uso length y no se especifico un numero
+
 for (let i = 0; i < numbers.length; i++) {
     console.log(`Elemento: ${numbers[i]}`)
 }

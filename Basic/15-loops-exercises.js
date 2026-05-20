@@ -19,15 +19,34 @@ while(j<=20){
     console.log(j);
     j++;
 }
-// 
+// 2. crea un bucle que sume los números del 1 al 100 e imprima el resultado
+//for
 let suma=0;
-let h=1;
-while(h<=100){
-    suma=suma+h;
-h++;
-//console.log(suma) //imprimir el acumulado en cada paso del bucle.
+for(let i=1; i<=100; i++){
+    suma += i;
+    console.log(suma) //imprimir el acumulado en cada paso del bucle.
 }
-console.log(suma)//imprime solo el resultado
+
+//while
+console.log("while")
+suma=0;
+let j=1;
+while(j<=100){
+    suma+=j;
+    j++;
+    console.log(suma)
+}
+
+//do while
+console.log("do while")
+let suma_y=0;
+let k=1;
+do{
+    suma_y+=k;
+    k++;
+    console.log(suma_y)
+} while(k<=100)
+
 
 // 3. Crea un bucle que imprima todos los números pares entre 1 y 50
 
@@ -38,9 +57,13 @@ for(let k=1;k<=50;k++)
     }}
 
     console.log("ejemplo 2")
-    for (let i = 2; i <= 50; i += 2) {
+
+//otra forna  
+for (let i = 2; i <= 50; i += 2) {
     console.log(i);
 }
+
+//con while
 console.log("while");
 let d = 1;
 while (d <= 50) {
@@ -49,7 +72,7 @@ while (d <= 50) {
     }
     d++;//fuera del if, por que si no se cumpliria siempre lo mismo y se iria a infinito
 }
-
+//while v2
 console.log("while v2")
 let a = 2;
 while (a <= 50) {
@@ -57,6 +80,7 @@ while (a <= 50) {
     a += 2;
 }
 
+//do while
 
 console.log("do while");
 let g = 1;
@@ -67,7 +91,8 @@ do {
   g++; // incrementamos siempre al final de la iteración
 } while (g <= 50);
 
-console.log("do whil2 v2");
+//do while v2
+console.log("do while v2");
 let l = 2;
 do {
   console.log(l);
@@ -102,12 +127,12 @@ while (aa < array.length) {
 //do while
 console.log("DO WHILE")
 
-let i1 = 0;
+let r = 0;
 
 do {
-  console.log(array[i1]);
-  i1++;
-} while (i1 < array.length);
+  console.log(array[r]);
+  r++;
+} while (r < array.length);
 
 
 

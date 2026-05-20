@@ -18,7 +18,7 @@ myMap = new Map([
 
 console.log(myMap)
 // Map(3) {"name" => "Brais", "email" => "braismoure@mouredev.com", "age" => 37}
-
+console.log("=========================================")
 // Métodos y propiedades
 /* Una propiedad es un valor que pertenece a un objeto, array o set, mientras que un método es una función que pertenece a ese mismo objeto y se usa para realizar acciones o modificarlo. */
 
