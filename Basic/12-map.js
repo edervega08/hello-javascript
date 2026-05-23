@@ -1,4 +1,4 @@
-/* Qué es: Es un objeto especial de JavaScript que guarda pares clave-valor.
+ /* Qué es: Es un objeto especial de JavaScript que guarda pares clave-valor.
 Uso: Se crea con el constructor new Map(). */
 // Map
 // Declaración

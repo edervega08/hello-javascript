@@ -116,6 +116,72 @@ console.log(producto)
  }
  
 // 8. Usa un bucle para invertir una cadena de texto
+let cadena="Eder vega";
+let invertir="";
+
+for (let i=cadena.length-1; i>=0; i--){
+ invertir=invertir+cadena[i];
+
+}
+console.log(invertir)
 //9. Usa un bucle para generar los primeros 10 números de la secuencia de Fibonacci
-// Generar los primeros 10 números de Fibonacci usando for
-// 10. Dado un array de números, usa un bucle para crear un nuevo array que contenga solo los números mayores a 10?
+
+let fibo=[0,1]; 
+// Se crea el arreglo con los dos primeros números de Fibonacci.
+// Fibonacci inicia con 0 y 1.
+
+for(let i=2; i<10; i++){
+// i=2 porque las posiciones 0 y 1 ya existen.
+// i<10 porque queremos llegar hasta tener 10 elementos.
+// i++ aumenta una posición en cada vuelta.
+
+    fibo[i]=fibo[i-1]+fibo[i-2]; // Se calcula el nuevo número usando:
+    // número anterior + número dos posiciones atrás
+
+    // Primera vuelta:
+    // i=2
+    // fibo[2]=fibo[1]+fibo[0]
+    // fibo[2]=1+0
+    // resultado: [0,1,1]
+
+    // Segunda vuelta:
+    // i=3
+    // fibo[3]=fibo[2]+fibo[1]
+    // fibo[3]=1+1
+    // resultado: [0,1,1,2]
+
+    // Tercera vuelta:
+    // i=4
+    // fibo[4]=fibo[3]+fibo[2]
+    // fibo[4]=2+1
+    // resultado: [0,1,1,2,3]
+
+    // Cuarta vuelta:
+    // i=5
+    // fibo[5]=fibo[4]+fibo[3]
+    // fibo[5]=3+2
+    // resultado: [0,1,1,2,3,5]
+
+    // Y así continúa...
+}
+
+console.log(fibo);// [0,1,1,2,3,5,8,13,21,34]
+
+
+// 10. Dado un array de números, usa un bucle para crear un nuevo array que contenga solo los números mayores a 10
+
+let numeros = [5, 12, 8, 20, 3, 15];// Arreglo original con los números a revisar.
+let nuevoarray=[];// Arreglo vacío donde se guardarán solo los mayores a 10.
+
+for(i=0; i<numeros.length; i++){
+// i=0 → empieza desde la primera posición.
+// i<numeros.length → recorre todas las posiciones.
+// i++ → avanza una posición en cada vuelta.
+
+    if(numeros[i]>10){    // Toma el número actual y pregunta:// ¿es mayor que 10?
+        nuevoarray.push(numeros[i])// Si es verdadero, agrega ese número al nuevo arreglo.
+        // nuevoarray.unshift(numeros[i])//push al final, unshift al principio
+    }
+}
+
+console.log(nuevoarray)// [12,20,15]

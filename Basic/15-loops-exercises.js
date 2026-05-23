@@ -165,15 +165,17 @@ let cadena2 = "invertir";
 let resultado = "";
 
 // for tiene 3 partes: inicialización ; condición ; actualización
-for (let i = cadena2.length - 1; i >= 0; i--) {
+for (let i = cadena2.length-1; i>= 0; i--) {
   // i empieza en el último índice (length - 1 → posición 7 en "invertir")
   // condición: i >= 0 → se detiene cuando llega antes del primer carácter
   // actualización: i-- → retrocede uno en cada vuelta
 
+//resultado = resultado + cadena2[i]; // vamos concatenando cada carácter al resultado
   resultado += cadena2[i]; // vamos concatenando cada carácter al resultado
   // Ejemplo: "r" → "ri" → "riv" → ... hasta "ritrevni"
 }
-
+//el console va fuera del for, para que lo de completo al final, 
+// si lo ponemos dentro se va a imprimir cada paso del proceso, no el resultado final
 console.log(resultado); // "ritrevni"
 
  //9. Usa un bucle para generar los primeros 10 números de la secuencia de Fibonacci
@@ -191,64 +193,122 @@ for (let i = 2; i < n; i++) {  // empezamos desde el índice 2
 }
 
 console.log(serie); // [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+//OTRA FORMA\
+//9. Usa un bucle para generar los primeros 10 números de la secuencia de Fibonacci
 
+let fibo=[0,1]; 
+// Se crea el arreglo con los dos primeros números de Fibonacci.
+// Fibonacci inicia con 0 y 1.
 
-//CON WHILE
-let n2 = 10;
-let primero2 = 0;
-let segundo2 = 1;
-let serie2 = [primero2, segundo2];
-let W = 2;
+for(let i=2; i<10; i++){
+// i=2 porque las posiciones 0 y 1 ya existen.
+// i<10 porque queremos llegar hasta tener 10 elementos.
+// i++ aumenta una posición en cada vuelta.
 
-while (W < n2) {
-  let siguiente = primero2 + segundo2;
-  serie2.push(siguiente);
-  primero2 = segundo2;
-  segundo2 = siguiente;
-  W++;
+    fibo[i]=fibo[i-1]+fibo[i-2];
+    // Se calcula el nuevo número usando:
+    // número anterior + número dos posiciones atrás
+
+    // Primera vuelta:
+    // i=2
+    // fibo[2]=fibo[1]+fibo[0]
+    // fibo[2]=1+0
+    // resultado: [0,1,1]
+
+    // Segunda vuelta:
+    // i=3
+    // fibo[3]=fibo[2]+fibo[1]
+    // fibo[3]=1+1
+    // resultado: [0,1,1,2]
+
+    // Tercera vuelta:
+    // i=4
+    // fibo[4]=fibo[3]+fibo[2]
+    // fibo[4]=2+1
+    // resultado: [0,1,1,2,3]
+
+    // Cuarta vuelta:
+    // i=5
+    // fibo[5]=fibo[4]+fibo[3]
+    // fibo[5]=3+2
+    // resultado: [0,1,1,2,3,5]
+
+    // Y así continúa...
 }
 
-console.log(serie2); // [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+console.log(fibo)// [0,1,1,2,3,5,8,13,21,34]
+//CON WHILE
 
+let n2 = 10;
+// Cantidad total de números que queremos generar.
+
+let primero2 = 0;
+// Primer número inicial de Fibonacci.
+
+let segundo2 = 1;
+// Segundo número inicial de Fibonacci.
+
+let serie2 = [primero2, segundo2];
+// Se crea el arreglo con los dos primeros valores: [0,1]
+
+let W = 2;
+// Inicia en 2 porque las posiciones 0 y 1 ya existen.
+
+while (W < n2) {// Mientras W sea menor a 10, continúa el ciclo.
+
+  let siguiente = primero2 + segundo2;  // Calcula el nuevo número: anterior + actual
+  serie2.push(siguiente);  // Agrega el nuevo valor al arreglo.
+  primero2 = segundo2;  // El segundo pasa a ser el primero.
+  segundo2 = siguiente;  // El nuevo valor pasa a ser el segundo.
+  W++; // Avanza una iteración.
+}
+console.log(serie2);// [0,1,1,2,3,5,8,13,21,34]
 
 //DO WHILE
-
-let n3 = 10;
-let primero3 = 0;
-let segundo3 = 1;
-let serie3 = [primero3, segundo3];
-let j2 = 2;
+let n3 = 10; // Cantidad de números a generar.
+let primero3 = 0;// Primer valor inicial.
+let segundo3 = 1;// Segundo valor inicial.
+let serie3 = [primero3, segundo3];// Se crea el arreglo con [0,1]
+let j2 = 2;// Empieza en 2 porque ya existen dos números.
 
 do {
-  let siguiente = primero3 + segundo3;
-  serie3.push(siguiente);
-  primero3 = segundo3;
-  segundo3 = siguiente;
-  j2++;
-} while (j2 < n3);
+// El bloque se ejecuta al menos una vez.
 
-console.log(serie3); // [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+  let siguiente = primero3 + segundo3;
+  // Calcula siguiente número.
+  serie3.push(siguiente);  // Inserta el número al arreglo.
+  primero3 = segundo3;  // El segundo valor pasa al primero.
+  segundo3 = siguiente;  // El nuevo valor pasa a segundo.
+  j2++;  // Aumenta el contador.
+
+} while (j2 < n3);
+// Después de ejecutar pregunta si continúa.
+console.log(serie3);// [0,1,1,2,3,5,8,13,21,34]
 
 
 // 10. Dado un array de números, usa un bucle para crear un nuevo array que contenga solo los números mayores a 10?
-let numeros2=[2,20,40,2,51,30,3]
-let guardar=[];
-for(let i=0;i<numeros2.length;i++){
-  if(numeros2[i]>10){
-guardar.push(numeros2[i])
-    
-  }
+
+let numeros = [5, 12, 8, 20, 3, 15];// Arreglo original con los números a revisar.
+let nuevoarray=[];// Arreglo vacío donde se guardarán solo los mayores a 10.
+
+for(i=0; i<numeros.length; i++){
+// i=0 → empieza desde la primera posición.
+// i<numeros.length → recorre todas las posiciones.
+// i++ → avanza una posición en cada vuelta.
+
+    if(numeros[i]>10){    // Toma el número actual y pregunta:// ¿es mayor que 10?
+        nuevoarray.push(numeros[i])// Si es verdadero, agrega ese número al nuevo arreglo.
+        // nuevoarray.unshift(numeros[i])//push al final, unshift al principio
+    }
 }
-console.log("mayores a 10",guardar)
 
+console.log(nuevoarray)// [12,20,15]
 
-
-
-
-
+//=============================================================================================
 //EXTRAS:
 let array3 = ["PERRO", "GATO", "STOP", "VACA", "PATO"];
-
+// recorre el array y se detiene si encuentra "STOP" ya que niega,
+//pero como es igual ya no es true y se detiene el bucle, por eso no imprime "STOP" ni nada después de "STOP"
 for (let i = 0; i < array.length && array[i] !== "STOP"; i++) {
   // inicialización: let i = 0 → empezamos desde el primer índice
   // condición: i < array.length && array[i] !== "STOP"
@@ -258,10 +318,6 @@ for (let i = 0; i < array.length && array[i] !== "STOP"; i++) {
 
   console.log(array[i]); // imprime hasta antes de "STOP"
 }
-
-// Salida:
-// PERRO
-// GATO
 
 //WHILE
 let array2 = ["PERRO", "GATO", "STOP", "VACA", "PATO"];
