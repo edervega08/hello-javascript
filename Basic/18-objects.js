@@ -1,12 +1,5 @@
-/*
-Clase 33 - Objetos
-Vídeo: https://youtu.be/1glVfFxj8a4?t=14229
-*/
-
 // Objetos
-
 // Sintaxis
-
 let person = {
     name: "Brais",
     age: 37,
@@ -14,7 +7,6 @@ let person = {
 }
 
 // Acceso a propiedades
-
 // Notación punto
 console.log(person.name)
 
@@ -26,23 +18,20 @@ console.log(person["name"])
 person.name = "Brais Moure"
 console.log(person.name)
 
+console.log(typeof person.age)//tipo de dato de la propiedad
+person.age = "37"//se cambia a strin
+console.log(person.age)//37
 console.log(typeof person.age)
-person.age = "37"
-console.log(person.age)
-console.log(typeof person.age)
+
 
 // Eliminación de propiedades
-
 delete person.age
-
-console.log(person)
+console.log(person)//ya sin age
 
 // Nueva propiedad
-
-person.email = "braismoure@mouredev.com"
-person["age"] = 37
-
-console.log(person)
+person.email = "braismoure@mouredev.com"//nueva propiedad email
+person["age"] = 37//se agrega otra vez el age
+console.log(person)//
 
 // Métodos (funciones)
 
@@ -55,7 +44,7 @@ let person2 = {
     }
 }
 person2.walk()
-
+console.log("vamos aqui++++++++++++++++++")
 // Anidación de objetos
 
 let person3 = {
@@ -93,16 +82,17 @@ let person4 = {
 console.log(person)
 console.log(person4)
 
-console.log(person == person4)
-console.log(person === person4)
+//false ambas por que se compara el valor de en memeria
+console.log(person == person4)//false
+console.log(person === person4)//false
 
-console.log(person.name == person4.name)
+console.log(person.name == person4.name)//true
 
 // Iteración
 
 for (let key in person4) {
-    console.log(key + ": " + person4[key])
-}
+    console.log(key + ": " + person4[key])//imprime cada clave y su valor
+}//metodo de acceso por [] por que con el punto no se puede acceder a la clave de forma dinamica
 
 // Funciones como objetos
 

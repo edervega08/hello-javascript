@@ -185,3 +185,19 @@ for(i=0; i<numeros.length; i++){
 }
 
 console.log(nuevoarray)// [12,20,15]
+console.log("==================ARROW FUNCION=======================")
+
+let funcion=(name)=>{
+    console.log(`Hola ${name}`);
+
+}
+funcion("Eder vega");
+
+const saludar = nombre => "Hola " + nombre
+console.log(saludar("Eder"))
+
+
+//sin variable 
+setTimeout(() => {
+   console.log("Hola")
+},1000)
