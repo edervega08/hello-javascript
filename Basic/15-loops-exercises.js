@@ -14,10 +14,10 @@ for(let i=1; i<=20; i++){
 
 
  console.log("WHILE");
-let j = 1;
-while(j<=20){
-    console.log(j);
-    j++;
+let q = 1;
+while(q<=20){
+    console.log(q);
+    q++;
 }
 // 2. crea un bucle que sume los números del 1 al 100 e imprima el resultado
 //for
@@ -288,16 +288,16 @@ console.log(serie3);// [0,1,1,2,3,5,8,13,21,34]
 
 // 10. Dado un array de números, usa un bucle para crear un nuevo array que contenga solo los números mayores a 10?
 
-let numeros = [5, 12, 8, 20, 3, 15];// Arreglo original con los números a revisar.
+let numeros2 = [5, 12, 8, 20, 3, 15];// Arreglo original con los números a revisar.
 let nuevoarray=[];// Arreglo vacío donde se guardarán solo los mayores a 10.
 
-for(i=0; i<numeros.length; i++){
+for(i=0; i<numeros2.length; i++){
 // i=0 → empieza desde la primera posición.
 // i<numeros.length → recorre todas las posiciones.
 // i++ → avanza una posición en cada vuelta.
 
-    if(numeros[i]>10){    // Toma el número actual y pregunta:// ¿es mayor que 10?
-        nuevoarray.push(numeros[i])// Si es verdadero, agrega ese número al nuevo arreglo.
+    if(numeros2[i]>10){    // Toma el número actual y pregunta:// ¿es mayor que 10?
+        nuevoarray.push(numeros2[i])// Si es verdadero, agrega ese número al nuevo arreglo.
         // nuevoarray.unshift(numeros[i])//push al final, unshift al principio
     }
 }
