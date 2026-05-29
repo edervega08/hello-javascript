@@ -334,3 +334,4 @@ while (i2 < array2.length && array2[i2] !== "STOP") {
 // Salida:
 // PERRO
 // GATO
+//ederr
