@@ -1,10 +1,6 @@
-/*
-Clase 40 - Manejo de errores
-Vídeo: https://youtu.be/1glVfFxj8a4?t=18751
-*/
+//Manejo de errores
 
 // Excepción
-
 // Produce una excepción
 let myObject
 // console.log(myObject.email)
@@ -12,6 +8,7 @@ let myObject
 // Captura de errores
 
 // try-catch
+/* Try-catch son bloques o estructuras para manejar errores y evitar que el programa truene. */
 
 try {
     // Código que intenta ejecutar
@@ -22,13 +19,16 @@ try {
     console.log("Se ha producido un error")
 }
 
-// Captura del error
 
+
+
+// Captura del error
 try {
     console.log(myObject.email)
 } catch (error) {
     console.log("Se ha producido un error:", error.message)
 }
+
 
 // finally
 
@@ -36,23 +36,29 @@ try {
     console.log(myObject.email)
 } catch (error) {
     console.log("Se ha producido un error:", error.message)
-} finally {
+} finally {//Independientemente de que todo salga bien o mal, TERMINARA.
     console.log("Este código se ejecuta siempre")
 }
 
-// No está soportado
+
+// No está soportado, no correcto sin el catch
 // try {
 //     console.log(myObject.email)
 // } finally {
 //     console.log("Este código se ejecuta siempre")
 // }
 
-// Lanzamiento de errores
 
+// Lanzamiento de errores
 // throw
+/* throw new Error
+sirve para crear y lanzar un error manualmente. */
 
 // throw new Error("Se ha producido un error")
 
+/* instanceof
+
+instanceof sirve para comprobar si un objeto fue creado a partir de una clase (o constructor). */
 function sumIntegers(a, b) {
     if (typeof a !== "number" || typeof b !== "number") {
         throw new TypeError("Esta operación sólo suma números")
@@ -88,7 +94,7 @@ try {
         console.log("Se ha producido un error:", error.message)
     }
 }
-
+console.log("+++++++++++++++vamos aqui+++++++++++")
 // Crear excepciones personalizadas
 
 class SumZeroIntegerError extends Error {
@@ -108,4 +114,4 @@ try {
 } catch (error) {
     console.log("Se ha producido un error personalizado:", error.message)
     error.printNumbers()
-}
+}console.log("+++++++++++++++vamos aqui+++++++++++")

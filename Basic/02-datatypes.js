@@ -71,3 +71,13 @@ console.log(typeof mySymbol) // symbol
 
 console.log(typeof myBigInt)  // bigint
 console.log(typeof myBigInt2) // bigint
+
+/*
+
+Number.isNaN()
+Sirve para verificar si un valor es NaN (Not a Number). 
+
+Number.isInteger()
+Sirve para verificar si un número es entero.
+
+Son parte de una clase (objeto constructor) global de JavaScript.*/

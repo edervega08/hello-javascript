@@ -1,8 +1,6 @@
-/*
-Clase 44 - Módulos
-Vídeo: https://youtu.be/1glVfFxj8a4?t=21480
-*/
+//Módulos
 
+ 
 // Importación de módulos
 
 import { add, PI, name, Circle } from "./28-export-modules.js"
@@ -17,7 +15,7 @@ console.log(add(5, 10))
 
 console.log(PI)
 console.log(name)
-
+console.log("++++++++++++++++++++++++")
 // Clases
 
 let circle = new Circle(10)

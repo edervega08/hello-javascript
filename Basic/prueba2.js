@@ -1,6 +1,46 @@
-const myFunc4 = (name) => console.log(`¡Hola, ${name}!`)
- function applyFunc(func, param) { 
-    func(param)//se le pasa la funcion de arriba myFunc4
+
+// Herencia de clases
+class Animal {
+
+    constructor(name) {
+        this.name = name
+    }
+
+    sound() {
+        console.log("El animal emite un sonido genérico")
+    }
+
 }
 
-applyFunc(myFunc4, "función de orden superior") 
+class Dog extends Animal {
+
+    sound() {
+        console.log("Guau!")
+    }
+
+    run() {
+        console.log("El perro corre")
+    }
+
+}
+
+class Fish extends Animal {
+
+    constructor(name, size) {
+        super(name)
+        this.size = size
+    }
+
+    swim() {
+        console.log("El pez nada")
+    }
+
+}
+
+let myDog = new Dog("MoureDog")
+myDog.run()
+myDog.sound()
+
+let myFish = new Fish("MoureFish", 10)
+myFish.swim()
+myFish.sound()

@@ -44,7 +44,7 @@ let person2 = {
     }
 }
 person2.walk()
-console.log("vamos aqui++++++++++++++++++")
+
 // Anidación de objetos
 
 let person3 = {
@@ -68,8 +68,9 @@ console.log(person3)
 console.log(person3.name)
 console.log(person3.job)
 console.log(person3.job.name)
-person3.job.work()
-
+person3.job.work()//invocacion a la funcion
+console.log(person3.job.work)//referencia a la función
+console.log("======================AQUI VAMOS")
 // Igualdad de objetos
 
 let person4 = {
@@ -93,7 +94,7 @@ console.log(person.name == person4.name)//true
 for (let key in person4) {
     console.log(key + ": " + person4[key])//imprime cada clave y su valor
 }//metodo de acceso por [] por que con el punto no se puede acceder a la clave de forma dinamica
-
+console.log("======================AQUI VAMOS")
 // Funciones como objetos
 
 function Person(name, age) { // Debería ser una clase
@@ -107,3 +108,11 @@ console.log(person5.name)
 
 console.log(typeof person5)
 console.log(typeof person4)
+
+//funcion constructora
+function Person() {
+}
+
+let persona = new Person()
+
+console.log(persona)

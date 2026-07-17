@@ -1,0 +1,23 @@
+.race
+async
+await
+.data
+??
+post
+allSettled
+WithTimeout
+
+propidades de metodos
+.this
+forEach
+values
+
+entries (Arrays, Sets y Maps.)
+
+localStorage
+INTERPOLACION DE VALORES
+
+CICLOS
+RECORDAR ESTRUCTURAS DE DATOS SET Arrays Y MAP COMO RECORDARLAR Y PEQUENA DEFINICION
+DIFERENCIA DE FOR OF VS FOR VS forEach
+sfor
